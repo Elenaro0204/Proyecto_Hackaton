@@ -1,39 +1,163 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .hero {
-    background-image: url('../assets/img/img_22/IMG_20220216_102144.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Altura de la vista */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Evita scrolls no deseados */
 }
 
+/* Imagen de fondo */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Asegura que esté detrás del contenido */
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo */
+    filter: brightness(50%);
+    /* Ajusta la opacidad sin afectar otros elementos */
+}
+
+/* Contenido del héroe */
 .hero-content {
-    color: white; /* Aseguramos que el texto esté en blanco */
-    padding: 20px; /* Añadido padding para darle espacio al texto */
-    max-width: 800px; /* Para evitar que el contenido se estire demasiado en pantallas grandes */
-    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    color: white;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
 }
 
+/* Botón */
 .hero-content a {
-    padding: 12px 24px; /* Ajustado para hacer el botón más grande y atractivo */
-    background-color: #3b82f6; /* Color de fondo predeterminado */
+    padding: 12px 24px;
+    background-color: #3b82f6;
     color: white;
-    border-radius: 8px; /* Bordes más redondeados */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    font-weight: bold; /* Añadido para mayor énfasis */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero-content a:hover {
-    background-color: #2563eb; /* Color de hover */
-    transform: scale(1.05); /* Le da un pequeño efecto de aumento al pasar el ratón */
+    background-color: #2563eb;
+    transform: scale(1.05);
 }
 
+/* Onda */
 .hero-wave {
     width: 100%;
-    height: 80px;
+    height: 30%;
+    /* Ajusta la altura */
     position: absolute;
-    bottom: -1px; /* Ajusta para que no haya separación */
+    bottom: 0;
+    z-index: 2;
+}
+
+.wave-background {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    /* Ajusta según sea necesario */
+    background-color: oklch(0.302 0.056 229.695);
+    /* Mismo color del wave */
+    z-index: -1;
+    /* Para que no tape el SVG */
+}
+
+/* Animación de aparición */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Cuenta atrás */
+.countdown {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fde047;
+
+}
+
+/* Estilo para el modal */
+.modal-content {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 3;
+}
+
+#modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo de las imágenes de la galería */
+.image-thumbnail {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.image-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.accordion-item {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.accordion-item.active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    /* Esto lo pone por encima de los demás elementos */
+}
+
+.accordion-collapse {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.accordion-collapse.show {
+    display: block;
+    opacity: 1;
 }
