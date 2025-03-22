@@ -179,7 +179,7 @@
                     <div
                         class="bg-white p-6 rounded-2xl flex flex-col items-center text-center shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl border-2 border-yellow-300 hidden-item">
                         <img src="./dist/assets/iconos/exito.png" alt="Reto"
-                            class="w-full h-52 object-contain rounded-md">
+                            class="w-full h-52 object-contain rounded-md animate-float">
                         <h3 class="text-2xl font-extrabold mt-4 text-yellow-500 drop-shadow-lg">Reto</h3>
                         <p class="text-lg mt-3 text-gray-900">Tendrás que resolver un reto que se os revelará el mismo
                             día
@@ -190,7 +190,7 @@
                     <div
                         class="bg-white p-6 rounded-2xl flex flex-col items-center text-center shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl border-2 border-yellow-300 hidden-item">
                         <img src="./dist/assets/iconos/idea-genial.png" alt="Equipo"
-                            class="w-full h-52 object-contain rounded-md">
+                            class="w-full h-52 object-contain rounded-md animate-float">
                         <h3 class="text-2xl font-extrabold mt-4 text-yellow-500 drop-shadow-lg">Equipo</h3>
                         <p class="text-lg mt-3 text-gray-900">Trabaja en equipo con participantes de otros centros
                             educativos.</p>
@@ -199,7 +199,7 @@
                     <div
                         class="bg-white p-6 rounded-2xl flex flex-col items-center text-center shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl border-2 border-yellow-300 hidden-item">
                         <img src="./dist/assets/iconos/amistoso.png" alt="Acompañamiento"
-                            class="w-full h-52 object-contain rounded-md">
+                            class="w-full h-52 object-contain rounded-md animate-float">
                         <h3 class="text-2xl font-extrabold mt-4 text-yellow-500 drop-shadow-lg">Acompañamiento</h3>
                         <p class="text-lg mt-3 text-gray-900">Conoce in situ las herramientas de emprendimiento más
                             innovadoras.</p>
@@ -208,7 +208,7 @@
                     <div
                         class="bg-white p-6 rounded-2xl flex flex-col items-center text-center shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl border-2 border-yellow-300 hidden-item">
                         <img src="./dist/assets/iconos/trofeo.png" alt="Premio"
-                            class="w-full h-52 object-contain rounded-md">
+                            class="w-full h-52 object-contain rounded-md animate-float">
                         <h3 class="text-2xl font-extrabold mt-4 text-yellow-500 drop-shadow-lg">Premio</h3>
                         <p class="text-lg mt-3 text-gray-900">Vale de 50€ para canjear en una papelería para cada
                             miembro
@@ -291,12 +291,12 @@
                     <!-- Lugar con link al mapa -->
                     <div
                         class="bg-white text-gray-900 p-8 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-300 flex flex-col gap-4 hidden-item">
-                        <h3 class="text-2xl font-bold text-yellow-500 flex items-center gap-2">
+                        <h3 class="text-2xl font-bold text-yellow-500 flex items-center justify-center gap-2">
                             📍 Lugar
                         </h3>
-                        <p class="text-lg">Biblioteca Municipal de Utrera</p>
+                        <p class="text-lg flex justify-center">Biblioteca Municipal de Utrera</p>
                         <a href="https://www.google.com/maps?q=Biblioteca+Municipal+de+Utrera" target="_blank"
-                            class="text-yellow-500 hover:underline flex items-center font-semibold">
+                            class="text-yellow-500 hover:underline flex justify-center font-semibold">
                             🌍 Ver en el mapa
                         </a>
                     </div>
@@ -304,21 +304,21 @@
                     <!-- Fecha y hora con cuenta atrás -->
                     <div
                         class="bg-white text-gray-900 p-8 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-300 flex flex-col gap-4 hidden-item">
-                        <h3 class="text-2xl font-bold text-yellow-500 flex items-center gap-2">
+                        <h3 class="text-2xl font-bold text-yellow-500 flex items-center gap-2 justify-center">
                             ⏳ Fecha y Hora
                         </h3>
-                        <p class="text-lg">Martes 25 de marzo de 2025</p>
-                        <p class="text-lg">8:30 - 15:00</p>
-                        <div id="countdown" class="text-2xl font-semibold text-red-500">Cargando...</div>
+                        <p class="text-lg flex justify-center">Martes 25 de marzo de 2025</p>
+                        <p class="text-lg flex justify-center">8:30 - 15:00</p>
+                        <div id="countdown" class="text-xl font-semibold text-red-500 flex items-center justify-center">Cargando...</div>
                     </div>
 
                     <!-- Premios -->
                     <div
                         class="bg-white text-gray-900 p-8 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-300 flex flex-col gap-4 hidden-item">
-                        <h3 class="text-2xl font-bold text-yellow-500 flex items-center gap-2">
+                        <h3 class="text-2xl font-bold text-yellow-500 flex items-center gap-2 justify-center">
                             🎁 Premio
                         </h3>
-                        <p class="text-lg">Vales de 50€ en material escolar (Ayto. de Utrera)</p>
+                        <p class="text-lg flex justify-center">Vales de 50€ en material escolar (Ayto. de Utrera)</p>
                     </div>
                 </div>
             </section>
@@ -331,6 +331,10 @@
                     Reto
                     <span class="absolute left-1/2 -bottom-2 w-16 h-1 bg-yellow-300 transform -translate-x-1/2"></span>
                 </h2>
+
+                <p class="text-lg text-center text-white mb-12 max-w-3xl leading-relaxed hidden-item">
+                    Conoce a Patricia Sánchez, la empresaria que propone el reto de Hackathon 2025.
+                </p>                
 
                 <div
                     class="bg-white p-8 rounded-3xl shadow-2xl grid grid-cols-1 lg:grid-cols-2 gap-10 transform hover:scale-105 transition-all duration-300 hidden-item">
@@ -509,26 +513,21 @@
                         class="bg-white p-8 rounded-3xl shadow-xl transition-transform duration-500 hover:scale-105 hover:shadow-2xl flex flex-col items-center hidden-item">
                         <h3 class="text-2xl font-semibold text-cyan-700 mb-6 text-center">¿Quién lo gestiona y organiza?
                         </h3>
-                        <div class="grid grid-cols-1 gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4">
                             <img src="./dist/assets/logos_hackathon_2024/ORGANIZAN AYTO 1.jpeg" alt="Organizadores"
                                 class="w-full h-full rounded-xl shadow-md">
                             <img src="./dist/assets/logos_hackathon_2024/ORGANIZAN IES 3.jpg" alt="Organizadores"
                                 class="w-full h-full rounded-xl shadow-md">
                             <img src="./dist/assets/logos_hackathon_2024/Logo Nueva Consejeria CADE.jpg"
-                                alt="Organizadores" class="w-full h-full rounded-xl shadow-md">
+                                alt="Organizadores" class="w-full h-full rounded-xl shadow-md sm:col-span-1 lg:col-span-2">
                         </div>
-                        <p class="text-lg text-gray-700 mt-6 text-center">
-                            Evento organizado por <strong class="text-yellow-500">Ayuntamiento de Utrera</strong>,
-                            <strong class="text-yellow-500">IES Ponce de León</strong> y <strong
-                                class="text-yellow-500">Andalucía Emprende</strong>.
-                        </p>
                     </div>
 
                     <!-- Participantes -->
                     <div
                         class="bg-white p-8 rounded-3xl shadow-xl transition-transform duration-500 hover:scale-105 hover:shadow-2xl flex flex-col items-center hidden-item">
                         <h3 class="text-2xl font-semibold text-cyan-700 mb-6">Participantes</h3>
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             <img src="./dist/assets/logos_hackathon_2024/IMG-20230303-WA0004.jpg" alt="Participante 1"
                                 class="w-40 h-full object-cover rounded-xl shadow-md">
                             <img src="./dist/assets/logos_hackathon_2024/LOGO PONCE ORGANIZA.png" alt="Participante 2"
@@ -548,15 +547,10 @@
                         <h3 class="text-2xl font-semibold text-cyan-700 mb-6">Colaboradores</h3>
                         <div class="grid grid-cols-1 gap-4">
                             <img src="./dist/assets/logos_hackathon_2024/COLABORAN DIEGO 1.jpg" alt="Colaborador 1"
-                                class="w-full h-full object-cover rounded-xl shadow-md">
+                                class="w-full lg:h-20 sm:h-full object-cover rounded-xl shadow-md">
                             <img src="./dist/assets/logos_hackathon_2024/COLABORAN MOCAIBO 2.jpg" alt="Colaborador 2"
-                                class="w-full h-full object-cover rounded-xl shadow-md">
+                                class="w-full lg:h-20 sm:h-full object-cover rounded-xl shadow-md">
                         </div>
-                        <p class="text-lg text-gray-700 mt-6 text-center">
-                            Disfrutemos de un desayuno y café cortesía de <strong class="text-yellow-500">Confitería
-                                Diego
-                                Vázquez</strong> y <strong class="text-yellow-500">Cafés Mocaibo</strong>.
-                        </p>
                     </div>
                 </div>
 
@@ -660,7 +654,7 @@
                             <button
                                 class="w-full flex justify-between items-center text-yellow-500 font-semibold text-lg md:text-xl hover:text-yellow-400 focus:outline-none"
                                 type="button" onclick="toggleAccordion(this)">
-                                <span>¿Qué modalidades de participación existen?</span>
+                                <span>¿Qué modalidades existen?</span>
                                 <svg class="text-cyan-950 arrow transition-transform duration-300 w-6 h-6 ml-auto"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
