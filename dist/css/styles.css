@@ -2642,6 +2642,16 @@
       height: calc(var(--spacing) * 20);
     }
   }
+  .lg\:h-25 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 25);
+    }
+  }
+  .lg\:h-30 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 30);
+    }
+  }
   .lg\:h-auto {
     @media (width >= 64rem) {
       height: auto;
