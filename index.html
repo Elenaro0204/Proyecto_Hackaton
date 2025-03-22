@@ -71,7 +71,7 @@
 
             <!-- Menú móvil -->
             <div id="mobileMenu"
-                class="fixed top-0 right-0 w-50 h-full bg-cyan-900 shadow-lg transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-start p-6 space-y-6">
+                class="fixed top-0 right-0 w-auto min-w-max h-full bg-cyan-900 shadow-lg transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-start p-6 space-y-6">
                 <button id="close-menu" class="p-2 rounded-full text-3xl self-end">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -113,6 +113,13 @@
                     class="text-lg font-medium text-white hover:text-yellow-300 transition duration-500 transform hover:rotate-360">
                     FAQS
                 </a>
+
+                <!-- Logo -->
+                <figure class="absolute bottom-0 left-0 w-full p-4">
+                    <a href="#">
+                        <img src="dist/assets/mis_logos/Logo1.png" alt="Hackaton 2025" class="w-16 h-16 mx-auto">
+                    </a>
+                </figure>
 
             </div>
         </div>
@@ -772,14 +779,30 @@
             const closeMenu = document.getElementById("close-menu");
             const mobileMenu = document.getElementById("mobileMenu");
 
-            menuToggle.addEventListener("click", () => {
+            // Abrir el menú
+            menuToggle.addEventListener("click", (event) => {
                 mobileMenu.classList.remove("translate-x-full");
+                event.stopPropagation(); // Evita que el clic en el botón también dispare el cierre del menú
             });
 
+            // Cerrar el menú con el botón "X"
             closeMenu.addEventListener("click", () => {
                 mobileMenu.classList.add("translate-x-full");
             });
+
+            // Cerrar el menú al hacer clic fuera de él
+            document.addEventListener("click", (event) => {
+                if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    mobileMenu.classList.add("translate-x-full");
+                }
+            });
+
+            // Evitar que los clics dentro del menú lo cierren
+            mobileMenu.addEventListener("click", (event) => {
+                event.stopPropagation();
+            });
         });
+
     </script>
     <!-- FIN Script Menu -->
 
@@ -868,7 +891,7 @@
     </script>
     <!-- FIN Script Modal Fotos -->
 
-    <!-- INICIO Script Menu Movil -->
+    <!-- INICIO Script Preguntas y Respuestas -->
     <script>
         function toggleAccordion(button) {
             const accordionItem = button.closest('.accordion-item');
@@ -899,7 +922,7 @@
             }
         }
     </script>
-    <!-- FIN Script Menu Movil -->
+    <!-- FIN Script Preguntas y Respuestas -->
 
     <!-- INICIO Script Animacion scroll -->
     <script>
