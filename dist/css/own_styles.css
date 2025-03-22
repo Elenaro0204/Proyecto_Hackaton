@@ -8,51 +8,6 @@ html {
     /* Evita scrolls no deseados */
 }
 
-/* Imagen de fondo */
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    /* Asegura que esté detrás del contenido */
-}
-
-.hero-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Asegura que la imagen cubra todo */
-    filter: brightness(50%);
-    /* Ajusta la opacidad sin afectar otros elementos */
-}
-
-/* Contenido del héroe */
-.hero-content {
-    color: white;
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 20px;
-}
-
-/* Botón */
-.hero-content a {
-    padding: 12px 24px;
-    background-color: #3b82f6;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.hero-content a:hover {
-    background-color: #2563eb;
-    transform: scale(1.05);
-}
-
 /* Onda */
 .hero-wave {
     width: 100%;
